@@ -1,11 +1,9 @@
   {% load static %}
   {% include 'global/partials/head.html' %}
   {% include 'global/partials/navbar.html' %}
-  <body>
+  <body class="vh-100">
    {% block content %}
-   {% if not user.is_authenticated %}
-   {% include 'authentication/partials/login.html' %}
-   {% endif %}
    {% endblock content %}
+   {% include 'global/partials/footer.html' %}
    {% include 'global/partials/scripts.html' %}
  </html>
