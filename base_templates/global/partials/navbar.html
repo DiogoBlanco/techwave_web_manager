@@ -1,0 +1,183 @@
+{% load static %}
+<header>
+  <nav class="navbar bg-dark navbar-expand-lg p-4" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img
+          class="p-1"
+          src="{% static 'global/img/globe-americas.svg' %}"
+          alt="globe"
+        />
+        WebManager
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="p-1"
+                src="{% static 'global/img/boxes.svg' %}"
+                alt="boxes-icon"
+              />
+              Estoque
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">Controle de Estoque</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Pedidos de Compra</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Tabela de Preços</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Código de Barras</a>
+              </li>
+              <li><a class="dropdown-item" href="#">Etiquetas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="p-1"
+                src="{% static 'global/img/cash-coin.svg' %}"
+                alt="money-icon"
+              />
+              Vendas
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Ponto de Venda</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Listagem de Vendas</a>
+              </li>
+              <li><a class="dropdown-item" href="#">Orçamentos</a></li>
+              <li><a class="dropdown-item" href="#">Devolução</a></li>
+              <li><a class="dropdown-item" href="#">Relatórios</a></li>
+              <li><a class="dropdown-item" href="#">Gráficos</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Comissão de Vendedores</a>
+              </li>
+              <li><a class="dropdown-item" href="#">Consignação</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="p-1"
+                src="{% static 'global/img/list-ol.svg' %}"
+                alt="list-icon"
+              />
+              Cadastros
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Clientes</a></li>
+              <li><a class="dropdown-item" href="#">Fornecedores</a></li>
+              <li><a class="dropdown-item" href="#">Funcionários</a></li>
+              <li><a class="dropdown-item" href="#">Produtos</a></li>
+              <li><a class="dropdown-item" href="#">Vendedores</a></li>
+              <li><a class="dropdown-item" href="#">Usuários</a></li>
+              <li><a class="dropdown-item" href="#">Transportadoras</a></li>
+              <li><a class="dropdown-item" href="#">Cidades</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="p-1"
+                src="{% static 'global/img/bank.svg' %}"
+                alt="bank-icon"
+              />
+              Financeiro
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">Contas a Receber</a>
+              </li>
+              <li><a class="dropdown-item" href="#">Contas a Pagar</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Controle de Cheques</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Cartão de Crédito</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Controle de Caixa</a>
+              </li>
+              <li><a class="dropdown-item" href="#">Fluxo de Caixa</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="p-1"
+                src="{% static 'global/img/globe.svg' %}"
+                alt="globe-icon"
+              />
+              Internet
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Mensagens</a></li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  Exportar endereços de email
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="nav-link" href="#">
+              <img
+                class="p-1"
+                src="{% static 'global/img/box-arrow-right.svg' %}"
+                alt="logout-icon"
+              />
+              Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
