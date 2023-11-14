@@ -1,0 +1,44 @@
+{% extends 'global/pages/base.html' %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{customer.name}}</title>
+  </head>
+  <body>
+    {% block content %}
+    <h1 class="text-center mt-5">{{customer.name}}</h1>
+    <ul class="list-group mt-4">
+      <li class="list-group-item">
+        <b>Endereço:</b>
+        {{customer.address}} {{customer.number}}
+      </li>
+      <li class="list-group-item">
+        <b>Bairro:</b>
+        {{customer.district}}
+      </li>
+      <li class="list-group-item">
+        <b>Cidade:</b>
+        {{customer.city}}
+      </li>
+      <li class="list-group-item">
+        <b>Estado:</b>
+        {{customer.state}}
+      </li>
+      <li class="list-group-item">
+        <b>CEP:</b>
+        {{customer.zip_code}}
+      </li>
+      <li class="list-group-item">
+        <b>Telefone:</b>
+        {{customer.phone}}
+      </li>
+      <li class="list-group-item">
+        <b>Email:</b>
+        {{customer.email}}
+      </li>
+    </ul>
+    {% endblock content %}
+  </body>
+</html>

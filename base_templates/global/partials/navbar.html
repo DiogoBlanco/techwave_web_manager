@@ -5,7 +5,7 @@
     data-bs-theme="dark"
   >
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="{% url 'index:index' %}">
         <img
           class="p-1"
           src="{% static 'global/img/globe-americas.svg' %}"
@@ -103,7 +103,11 @@
               Cadastros
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Clientes</a></li>
+              <li>
+                <a class="dropdown-item" href="{% url 'index:customers' %}">
+                  Clientes
+                </a>
+              </li>
               <li><a class="dropdown-item" href="#">Fornecedores</a></li>
               <li><a class="dropdown-item" href="#">Funcionários</a></li>
               <li><a class="dropdown-item" href="#">Produtos</a></li>

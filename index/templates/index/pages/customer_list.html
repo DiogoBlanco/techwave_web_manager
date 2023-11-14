@@ -1,0 +1,27 @@
+{% extends 'global/pages/base.html' %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clientes</title>
+  </head>
+  <body>
+    {% block content %}
+    <h1 class="text-center mt-5">Clientes</h1>
+    <a class="btn btn-primary ms-5 mt-5" href="#">Adicionar Cliente</a>
+    {% for customer in object_list %}
+    <ul class="list-group mt-4">
+      <li class="list-group-item">
+        <a href="{% url 'index:customer_detail' customer.id %}">
+          {{ customer.name }}
+        </a>
+        - {{ customer.email }}
+      </li>
+      {% empty %}
+      <li class="list-group-item">Nenhum Cliente Cadastrado</li>
+      {% endfor %}
+    </ul>
+    {% endblock content %}
+  </body>
+</html>
