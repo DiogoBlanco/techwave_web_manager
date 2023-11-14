@@ -1,9 +1,10 @@
   {% load static %}
   {% include 'global/partials/head.html' %}
   {% include 'global/partials/navbar.html' %}
-  <body class="vh-100">
-   {% block content %}
-   {% endblock content %}
-   {% include 'global/partials/footer.html' %}
+  <body>
+    <main class="container">
+      {% block content %}
+      {% endblock content %}
+    </main>
    {% include 'global/partials/scripts.html' %}
  </html>
