@@ -39,6 +39,12 @@
         {{customer.email}}
       </li>
     </ul>
+    <a
+      class="btn btn-primary mt-3"
+      href="{% url 'index:customer_update' customer.id %}"
+    >
+      Editar
+    </a>
     {% endblock content %}
   </body>
 </html>

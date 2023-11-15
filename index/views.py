@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import View, ListView, DetailView, CreateView
+from django.views.generic import View, ListView, DetailView, CreateView, UpdateView
 from .models.customers import Customer
 from .forms import CustomerForm
 
@@ -20,6 +20,13 @@ class CustomerDetailView(DetailView):
 
 
 class CustomerCreateView(CreateView):
+    model = Customer
+    form_class = CustomerForm
+    success_url = '/customers/'
+    template_name = 'index/pages/customer_form.html'
+
+
+class CustomerUpdateView(UpdateView):
     model = Customer
     form_class = CustomerForm
     success_url = '/customers/'
