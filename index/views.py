@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import View, ListView, DetailView, CreateView, UpdateView
+from django.views.generic import View, ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models.customers import Customer
 from .forms import CustomerForm
 
@@ -31,3 +31,9 @@ class CustomerUpdateView(UpdateView):
     form_class = CustomerForm
     success_url = '/customers/'
     template_name = 'index/pages/customer_form.html'
+
+
+class CustomerDeleteView(DeleteView):
+    model = Customer
+    success_url = '/customers/'
+    template_name = 'index/pages/customer_confirm_delete.html'

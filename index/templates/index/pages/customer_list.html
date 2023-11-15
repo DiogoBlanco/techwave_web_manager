@@ -27,7 +27,7 @@
           style="margin-right: .8rem;"
         />
       </a>
-      <a class="text-decoration-none"  href="#">
+      <a class="text-decoration-none"  href="{% url 'index:customer_delete' customer.id %}">
         <img src="{% static 'global/img/trash-fill.svg' %}" alt="trash"/>
       </a>
     </li>
