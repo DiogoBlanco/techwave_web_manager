@@ -1,0 +1,44 @@
+{% extends 'global/pages/base.html' %} 
+{% load static %}
+<body>
+  {% block content %}
+  <h1 class="text-center mt-5">Fornecedores</h1>
+  <a class="btn btn-primary mt-5" href="{% url 'index:supplier_create' %}">
+    Adicionar Fornecedor
+  </a>
+  {% for supplier in object_list %}
+  <ul class="list-group mt-4">
+    <li class="list-group-item bg-body-secondary">
+      <b>Empresa:</b>
+      <a href="{% url 'index:supplier_detail' supplier.id %}">
+        {{ supplier.company }}
+      </a>
+      <br />
+      <b>Telefone:</b>
+      {{ supplier.phone }}
+      <br />
+      <b>Email:</b>
+      {{ supplier.email }}
+      <br />
+      <b>Contato:</b>
+      {{ supplier.contact }}
+      <br />
+      <b>Cadastro em:</b>
+      {{ supplier.registration_date }}
+      <br />
+      <a class="text-decoration-none" href="{% url 'index:supplier_update' supplier.id %}">
+        <img
+          src="{% static 'global/img/pencil-fill.svg' %}"
+          alt="pencil"
+          style="margin-right: .8rem;"
+        />
+      </a>
+      <a class="text-decoration-none"  href="{% url 'index:supplier_delete' supplier.id %}">
+        <img src="{% static 'global/img/trash-fill.svg' %}" alt="trash"/>
+      </a>
+    </li>
+  </ul>
+  {% empty %}
+  <li class="list-group-item mt-5">Nenhum Fornecedor Cadastrado</li>
+  {% endfor %} {% endblock content %}
+</body>

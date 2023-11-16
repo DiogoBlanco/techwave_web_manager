@@ -23,6 +23,10 @@ class Customer(models.Model):
     zip_code = models.CharField(max_length=9, verbose_name='CEP')
     phone = models.CharField(max_length=15, verbose_name='Telefone')
     email = models.EmailField(verbose_name='E-mail')
+    cpf = models.CharField(
+        verbose_name='CPF', max_length=14, blank=True, null=True)
+    cnpj = models.CharField(verbose_name='CNPJ',
+                            max_length=18, blank=True, null=True)
 
     class Meta:
         verbose_name = 'Cliente'

@@ -1,0 +1,16 @@
+{% extends 'global/pages/base.html' %} 
+{% load crispy_forms_tags %} 
+{% block title %}<title>Adicionar Cliente</title>{% endblock title %}
+<body>
+  {% block content %}
+  <h1 class="text-center mt-5">Adicionar Fornecedor</h1>
+  <form method="post">
+    {% csrf_token %} 
+    {{form|crispy}}
+    <div class="d-flex justify-content-start gap-3 mt-3 mb-5">
+    <button class="btn btn-primary" type="submit">Salvar</button>
+    <a class="btn btn-warning" href="{% url 'index:suppliers' %}">Cancelar</a>
+    </div>
+  </form>
+  {% endblock content %}
+</body>

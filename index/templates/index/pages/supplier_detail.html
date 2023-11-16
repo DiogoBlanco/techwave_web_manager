@@ -4,60 +4,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{customer.name}}</title>
+    <title>{{supplier.company}}</title>
   </head>
   <body>
     {% block content %}
-    <h1 class="text-center mt-5">{{customer.name}}</h1>
+    <h1 class="text-center mt-5">{{supplier.company}}</h1>
     <ul class="list-group mt-4">
       <li class="list-group-item">
         <b>Endereço:</b>
-        {{customer.address}} {{customer.number}}
+        {{supplier.address}} {{supplier.number}}
       </li>
       <li class="list-group-item">
         <b>Bairro:</b>
-        {{customer.district}}
+        {{supplier.district}}
       </li>
       <li class="list-group-item">
         <b>Cidade:</b>
-        {{customer.city}}
+        {{supplier.city}}
       </li>
       <li class="list-group-item">
         <b>Estado:</b>
-        {{customer.state}}
+        {{supplier.state}}
       </li>
       <li class="list-group-item">
         <b>CEP:</b>
-        {{customer.zip_code}}
+        {{supplier.zip_code}}
       </li>
       <li class="list-group-item">
         <b>Telefone:</b>
-        {{customer.phone}}
+        {{supplier.phone}}
       </li>
       <li class="list-group-item">
         <b>Email:</b>
-        {{customer.email}}
-      </li>
-      {% if customer.cpf %}
-      <li class="list-group-item">
-        <b>CPF:</b>
-        {{customer.cpf}}
-      </li>
-      {% endif %}
-      {% if customer.cnpj %}
+        {{supplier.email}}
       <li class="list-group-item">
         <b>CNPJ:</b>
-        {{customer.cnpj}}
+        {{supplier.cnpj}}
       </li>
-      {% endif %}
     </ul>
     <a
       class="btn btn-primary mt-3"
-      href="{% url 'index:customer_update' customer.id %}"
+      href="{% url 'index:supplier_update' supplier.id %}"
     >
       Editar
     </a>
-    <a class="btn btn-secondary mt-3" href="{% url 'index:customers' %}">
+    <a class="btn btn-secondary mt-3" href="{% url 'index:suppliers' %}">
       Voltar
     </a>
     {% endblock content %}
