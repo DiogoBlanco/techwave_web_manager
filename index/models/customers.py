@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class Customer(models.Model):
@@ -27,6 +28,8 @@ class Customer(models.Model):
         verbose_name='CPF', max_length=14, blank=True, null=True)
     cnpj = models.CharField(verbose_name='CNPJ',
                             max_length=18, blank=True, null=True)
+    registration_date = models.DateTimeField(
+        verbose_name='Data de cadastro', default=timezone.now)
 
     class Meta:
         verbose_name = 'Cliente'

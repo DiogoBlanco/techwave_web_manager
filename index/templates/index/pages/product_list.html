@@ -1,0 +1,46 @@
+{% extends 'global/pages/base.html' %} 
+{% load static %}
+<body>
+  {% block content %}
+  <h1 class="text-center mt-5">Produtos</h1>
+  <a class="btn btn-primary mt-5" href="{% url 'index:product_create' %}">
+    Adicionar Produto
+  </a>
+  {% for product in object_list %}
+  <ul class="list-group mt-4">
+    <li class="list-group-item bg-body-secondary">
+      <b>Descrição:</b>
+      <a href="{% url 'index:product_detail' product.id %}">
+        {{ product.description }}
+      </a>
+      <br />
+      <b>Fornecedor:</b>
+      {{ product.supplier }}
+      <br />
+      <b>Estoque:</b>
+      {{ product.stock }}
+      <br />
+      <b>Preço:</b>
+      {{ product.sell_value }}
+      <br />
+      <b>Cadastro em:</b>
+      {{ product.registration_date }}
+      <br />
+      <img class="mt-3 mb-3 m-auto" src="{{product.photo.url}}" alt="product" style="width: 100px; height: 84px;"><br>
+      <a class="text-decoration-none" href="{% url 'index:product_update' product.id %}">
+        <img
+          src="{% static 'global/img/pencil-fill.svg' %}"
+          alt="pencil"
+          style="margin-right: .8rem;"
+        />
+      </a>
+      <a class="text-decoration-none"  href="{% url 'index:product_delete' product.id %}">
+        <img src="{% static 'global/img/trash-fill.svg' %}" alt="trash"/>
+      </a>
+    </li>
+  </ul>
+  {% empty %}
+  <li class="list-group-item mt-5">Nenhum Produto Cadastrado</li>
+  {% endfor %} 
+  {% endblock content %}
+</body>

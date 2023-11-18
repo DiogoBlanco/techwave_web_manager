@@ -1,0 +1,12 @@
+{% extends 'global/pages/base.html' %}
+
+{% block content %}
+  <h2 class="text-center mt-5">Deseja apagar o produto?</h2>
+  <p class="text-center">Tem certeza que deseja apagar "{{ product.description }}"?</p>
+
+  <form class="text-center" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Apagar" class="btn btn-danger">
+    <a href="{% url 'index:product_detail' product.id %}" class="btn btn-secondary">Cancelar</a>
+  </form>
+{% endblock %}

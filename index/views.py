@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.views.generic import View, ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models.customers import Customer
 from .models.suppliers import Supplier
-from .forms import CustomerForm, SupplierForm
+from .models.products import Product
+from .forms import CustomerForm, SupplierForm, ProductForm
 
 
 # Home
@@ -71,3 +72,34 @@ class SupplierDeleteView(DeleteView):
     model = Supplier
     success_url = '/suppliers/'
     template_name = 'index/pages/supplier_confirm_delete.html'
+
+
+# Products Views
+class ProductsListView(ListView):
+    model = Product
+    template_name = 'index/pages/product_list.html'
+
+
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = 'index/pages/product_detail.html'
+
+
+class ProductCreateView(CreateView):
+    model = Product
+    form_class = ProductForm
+    success_url = '/products/'
+    template_name = 'index/pages/product_form.html'
+
+
+class ProductUpdateView(UpdateView):
+    model = Product
+    form_class = ProductForm
+    success_url = '/products/'
+    template_name = 'index/pages/product_form.html'
+
+
+class ProductDeleteView(DeleteView):
+    model = Product
+    success_url = '/products/'
+    template_name = 'index/pages/product_confirm_delete.html'

@@ -7,7 +7,7 @@
     Adicionar Cliente
   </a>
   {% for customer in object_list %}
-  <ul class="list-group mt-4">
+  <ul class="list-group mt-4 mb-2">
     <li class="list-group-item bg-body-secondary">
       <b>Nome:</b>
       <a href="{% url 'index:customer_detail' customer.id %}">
@@ -19,6 +19,9 @@
       <br />
       <b>Email:</b>
       {{ customer.email }}
+      <br />
+      <b>Cadastro em:</b>
+      {{ customer.registration_date }}
       <br />
       <a class="text-decoration-none" href="{% url 'index:customer_update' customer.id %}">
         <img
