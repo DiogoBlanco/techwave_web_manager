@@ -31,9 +31,9 @@ class Supplier(models.Model):
     registration_date = models.DateTimeField(
         verbose_name='Data de cadastro', default=timezone.now)
 
+    def __str__(self):
+        return self.company
+
     class Meta:
         verbose_name = 'Fornecedor'
         verbose_name_plural = 'Fornecedores'
-
-    def __str__(self):
-        return self.company

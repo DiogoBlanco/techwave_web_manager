@@ -29,9 +29,9 @@ class Product(models.Model):
     def sell_value(self):
         return self.cost + self.cost * (self.profit_margin / 100)
 
+    def __str__(self):
+        return self.description
+
     class Meta:
         verbose_name = 'Produto'
         verbose_name_plural = 'Produtos'
-
-        def __str__(self):
-            return self.description

@@ -5,14 +5,18 @@
     <h1 class="text-center mt-5">{{product.description}}</h1>
     <ul class="list-group mt-4">
       <img class="mt-3 mb-3 m-auto" src="{{product.photo.url}}" alt="product" style="width: 800px; height: 640px;">
+      {% if product.sector %}
       <li class="list-group-item">
         <b>Setor:</b>
         {{product.sector}}
       </li>
+      {% endif %}
+      {% if product.unit %}
       <li class="list-group-item">
         <b>Unidade:</b>
         {{product.unit}}
       </li>
+      {% endif %}
       <li class="list-group-item">
         <b>Fornecedor:</b>
         {{product.supplier}}
@@ -23,15 +27,15 @@
       </li>
       <li class="list-group-item">
         <b>Custo:</b>
-        {{product.cost}}
+        R$ {{product.cost}}
       </li>
       <li class="list-group-item">
         <b>Margem:</b>
-        {{product.profit_margin}}
+        {{product.profit_margin}}%
       </li>
       <li class="list-group-item">
         <b>Preço de Venda:</b>
-        {{product.sell_value}}
+        R$ {{product.sell_value}}
       </li>
 
       <li class="list-group-item">
