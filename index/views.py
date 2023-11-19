@@ -43,6 +43,10 @@ class CustomerDeleteView(DeleteView):
     template_name = 'index/pages/customer_confirm_delete.html'
 
 
+class CustomerSearchView(ListView):
+    model = Customer
+
+
 # Suppliers Views
 class SuppliersListView(ListView):
     model = Supplier

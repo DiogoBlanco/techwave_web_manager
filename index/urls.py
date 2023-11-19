@@ -17,6 +17,8 @@ urlpatterns = [
          CustomerUpdateView.as_view(), name='customer_update'),
     path('customers/<int:pk>/delete',
          CustomerDeleteView.as_view(), name='customer_delete'),
+    path('customers/search',
+         CustomerSearchView.as_view(), name='customer_search'),
 
     # Suppliers Urls
     path('suppliers/', SuppliersListView.as_view(), name='suppliers'),

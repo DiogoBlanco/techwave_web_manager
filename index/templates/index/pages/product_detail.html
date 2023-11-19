@@ -1,5 +1,6 @@
 {% extends 'global/pages/base.html' %}
 {% load static %}
+{% block title %}<title>Webmanager | {{product.description}}</title>{% endblock title %}
   <body>
     {% block content %}
     <h1 class="text-center mt-5">{{product.description}}</h1>
