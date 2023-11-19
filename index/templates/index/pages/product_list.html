@@ -4,7 +4,7 @@
 {% block title %}<title>Webmanager | Produtos</title>{% endblock title %}
 <body>
   {% block content %}
-  <h1 class="text-center mt-5">Produtos</h1>
+  <h1 class="text-center mt-3">Produtos</h1>
   <div class="d-flex align-items-center justify-content-between">
     <a class="btn btn-primary mt-5" href="{% url 'index:product_create' %}">
       Adicionar Produto
@@ -17,7 +17,7 @@
     </form>
   </div>
   {% for product in object_list %}
-  <ul class="list-group mt-4">
+  <ul class="list-group mt-4 mb-3 shadow-sm">
     <li class="list-group-item bg-body-secondary">
       <b>Descrição:</b>
       <a href="{% url 'index:product_detail' product.id %}">

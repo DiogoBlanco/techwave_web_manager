@@ -4,7 +4,7 @@
 {% block title %}<title>Webmanager | Clientes</title>{% endblock title %}
 <body>
   {% block content %}
-  <h1 class="text-center mt-5">Clientes</h1>
+  <h1 class="text-center mt-3">Clientes</h1>
   <div class="d-flex align-items-center justify-content-between">
     <a class="btn btn-primary mt-5" href="{% url 'index:customer_create' %}">
       Adicionar Cliente
@@ -17,7 +17,7 @@
     </form>
   </div>
   {% for customer in object_list %}
-  <ul class="list-group mt-4 mb-2">
+  <ul class="list-group mt-4 mb-2 shadow-sm">
     <li class="list-group-item bg-body-secondary">
       <b>Nome:</b>
       <a href="{% url 'index:customer_detail' customer.id %}">

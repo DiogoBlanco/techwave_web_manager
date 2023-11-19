@@ -3,7 +3,7 @@
 {% block title %}<title>Webmanager | Adicionar Fornecedor</title>{% endblock title %}
 <body>
   {% block content %}
-  <h1 class="text-center mt-5">Adicionar Fornecedor</h1>
+  <h1 class="text-center mt-3">Adicionar Fornecedor</h1>
   <form method="post">
     {% csrf_token %} 
     {{form|crispy}}
