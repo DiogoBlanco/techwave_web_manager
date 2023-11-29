@@ -4,7 +4,7 @@
 <body>
   {% block content %}
   <h1 class="text-center mt-3">Adicionar Produto</h1>
-  <form method="post">
+  <form method="post" enctype="multipart/form-data">
     {% csrf_token %} 
     {{form|crispy}}
     <div class="d-flex justify-content-start gap-3 mt-3 mb-5">

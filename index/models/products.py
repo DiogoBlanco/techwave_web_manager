@@ -15,7 +15,7 @@ class Product(models.Model):
     cost = models.PositiveIntegerField(
         default=0, verbose_name='Preço de Custo')
     profit_margin = models.PositiveIntegerField(
-        default=0, verbose_name='Margem de Lucro')
+        default=30, verbose_name='Margem de Lucro')
     stock = models.PositiveIntegerField(
         default=0, verbose_name='Quantidade em estoque')
     minimum_stock = models.PositiveIntegerField(
